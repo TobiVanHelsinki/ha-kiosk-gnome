@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=HA-Kiosk Fullscreen
+Comment=Bring Firefox back to fullscreen
+Exec=gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/KioskRemax --method org.gnome.Shell.Extensions.KioskRemax.RemaxFirefox
+Icon=view-fullscreen
+Terminal=false
+Type=Application
+NoDisplay=false

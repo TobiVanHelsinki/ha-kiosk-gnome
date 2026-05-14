@@ -1,0 +1,11 @@
+[Unit]
+Description=Kiosk display control via MQTT
+After=network-online.target
+
+[Service]
+ExecStart=%h/ha-kiosk-gnome/display-control/kiosk-display-control.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Kiosk display state watcher via DBus
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/ha-kiosk-gnome/display-control/kiosk-display-watch.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+

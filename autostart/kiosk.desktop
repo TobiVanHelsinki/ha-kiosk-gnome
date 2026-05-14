@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=HA-Kiosk
+Exec=/bin/bash -c 'source ~/ha-kiosk-gnome/autostart/kiosk.env && ~/ha-kiosk-gnome/autostart/kiosk-restart.sh'
+Icon=video-display
+Terminal=false
+X-GNOME-Autostart-enabled=true

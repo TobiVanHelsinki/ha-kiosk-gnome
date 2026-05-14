@@ -1,0 +1,7 @@
+{
+  "uuid": "kiosk-remax@local",
+  "name": "Kiosk Remax",
+  "description": "Exposes DBus method and panel button to fullscreen Firefox",
+  "version": 1,
+  "shell-version": ["46"]
+}
