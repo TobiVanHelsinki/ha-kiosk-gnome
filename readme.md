@@ -5,7 +5,7 @@ This repo enables an Ubuntu GNOME to be used as a HomeAssistant Kiosk.
 ## Overview
 
 > This repository contains the technical setup. For background, hardware
-> selection, and installation notes see the accompanying [blog post](<url>).
+> selection, and installation notes see the accompanying [blog post](https://blog.t-imperium.de/it/ha-kiosk-walldisplay/).
 
 ### Features
 
@@ -228,7 +228,7 @@ This Solution provides a Button, that incorporates an GNOME Shell Extension, tha
 ```
 User Swipe → Firefox leaves fullscreen
 
-User taps dock button
+User taps button
     │
     ▼
     kiosk-remax.desktop
@@ -238,8 +238,9 @@ User taps dock button
 ```
 
 [`extension.js`](fullscreen/extension.js) exposes a DBus method `RemaxFirefox()` which calls `Meta.Window.make_fullscreen()` from within the Shell process – the only way to programmatically manipulate windows under Wayland. [`metadata.json`](fullscreen/metadata.json) is the Extension metadata required by GNOME Shell.
+The extension displays a Button in the Title-Bar to trigger the maximization.
 
-[`kiosk-remax.desktop`](fullscreen/kiosk-remax.desktop) provides a button in the desktop overview that triggers `RemaxFirefox()` via `gdbus call`.
+[`kiosk-remax.desktop`](fullscreen/kiosk-remax.desktop) additionally provides a button in the desktop overview that triggers `RemaxFirefox()` via `gdbus call`.
 
 #### Installation on the kiosk tablet
 
